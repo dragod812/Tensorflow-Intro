@@ -53,10 +53,10 @@ n_batches = int(np.ceil(m / batch_size))
 
 #fetching data in Batches using np.random
 def fetch_batch(epoch, batch_index, batch_size):
-	np.random.seed(epoch * n_batches + batch_index)  # not shown in the book
-	indices = np.random.randint(m, size=batch_size)  # not shown
-	X_batch = scaled_housing_data_plus_bias[indices] # not shown
-	y_batch = housing.target.reshape(-1, 1)[indices] # not shown
+	np.random.seed(epoch * n_batches + batch_index)  
+	indices = np.random.randint(m, size=batch_size)  
+	X_batch = scaled_housing_data_plus_bias[indices]
+	y_batch = housing.target.reshape(-1, 1)[indices]
 	return X_batch, y_batch
 
 #session starts here
